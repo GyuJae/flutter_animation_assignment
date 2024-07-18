@@ -1,3 +1,4 @@
+import 'package:animation_assignment_app/screens/explicit_animations_screen.dart';
 import 'package:animation_assignment_app/screens/implicit_animations_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,16 +13,32 @@ class HomeScreen extends StatelessWidget {
         ),
         body: Column(
           children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ImplicitAnimationsScreen(),
-                  ),
-                );
-              },
-              child: const Text("Implicit Animations"),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ImplicitAnimationsScreen(),
+                    ),
+                  );
+                },
+                child: const Text("Implicit Animations"),
+              ),
+            ),
+            const SizedBox(height: 5),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ExplicitAnimationsScreen(),
+                    ),
+                  );
+                },
+                child: const Text("Explicit Animations"),
+              ),
             )
           ],
         ));
