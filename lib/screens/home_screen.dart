@@ -1,5 +1,6 @@
 import 'package:animation_assignment_app/screens/custom_painter_screen.dart';
 import 'package:animation_assignment_app/screens/explicit_animations_screen.dart';
+import 'package:animation_assignment_app/screens/gesture_animation_screen.dart';
 import 'package:animation_assignment_app/screens/implicit_animations_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -53,6 +54,20 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: const Text("Custom Painter"),
+            ),
+          ),
+          const SizedBox(height: 5),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const GestureAnimationScreen(),
+                  ),
+                );
+              },
+              child: const Text("Gesture Animation"),
             ),
           )
         ],
